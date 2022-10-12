@@ -1,1 +1,1 @@
-# study-cors
+# learning-cors
