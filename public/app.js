@@ -4,18 +4,15 @@ const { useEffect, useState } = React
 function Body(props) {
   const [ state, setState ] = useState({});
 
-  useEffect(() => {
-    // asyncを外すために一度非同期関数を定義して実行する。
-    async function fetchData() {
-      const res = await fetch("https://swapi.dev/api/people/1");
-      const data = await res.json();
-      setState(data);
-    }
-    fetchData();
-  });
+  async function fetchData() {
+    const res = await fetch("https://swapi.dev/api/people/1");
+    const data = await res.json();
+    setState(data);
+  }
   
   return (
     <div>
+      <button onClick={fetchData}>Click</button>
       <p>{state.name}</p>
     </div>
   );
