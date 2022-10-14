@@ -5,7 +5,7 @@ function Body(props) {
   const [ state, setState ] = useState({});
 
   async function fetchData() {
-    const res = await fetch("https://swapi.dev/api/people/1");
+    const res = await fetch("http://localhost:3000/");
     const data = await res.json();
     setState(data);
   }
