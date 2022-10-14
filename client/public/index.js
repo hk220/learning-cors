@@ -6,14 +6,14 @@ function Body(props) {
 
   async function fetchData() {
     const res = await fetch("http://localhost:3000/");
-    const data = await res.json();
-    setState(data);
+    const data = await res.text();
+    setState({message: data});
   }
   
   return (
     <div>
       <button onClick={fetchData}>Click</button>
-      <p>{state.name}</p>
+      <p>{state.message}</p>
     </div>
   );
 }
