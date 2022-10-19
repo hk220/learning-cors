@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "cors": "USE_CORS=1 node app.js"
+    "cors": "node app.js --cors"
   },
   "dependencies": {
+    "commander": "^9.4.1",
     "cors": "^2.8.5",
     "express": "^4.18.2"
   }
